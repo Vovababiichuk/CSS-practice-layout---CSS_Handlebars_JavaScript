@@ -1,0 +1,22 @@
+{{#with data}}   
+<div class="card">
+   <div class="card-header">
+      {{name}}
+   </div>
+   <div class="card-body">
+      <div class="card__price card-block">
+         <span class="card__price-amount">${{price}}</span>
+         <span class="card__price-duration">/ mo</span>
+      </div>
+      <div class="card__description card-block">
+         {{#each features}}
+         <span class="card__price-text">{{this}}</span>
+         {{/each}}
+      </div>
+      <div class="card__button card-block">
+         <button class="btn {{#if
+            @first}}btn-outline-primary{{else}}btn-primary{{/if}} card-button">{{button}}</button>
+      </div>
+   </div>
+</div>
+{{/with}}

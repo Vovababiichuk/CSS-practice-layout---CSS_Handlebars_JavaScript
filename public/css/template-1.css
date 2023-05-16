@@ -1,0 +1,161 @@
+:root {
+   --font-primary: 'Roboto', sans-serif;
+   --color-primary: #212529;
+   --color-secondary: #6c757d;
+}
+
+html {
+   box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+   box-sizing: inherit;
+}
+
+.page {
+   background-color: #ffffff;
+   font-family: var(--font-primary);
+}
+
+.container {
+   width: 100%;
+   max-width: 990px;
+   margin: 0 auto;
+   padding: 0 15px;
+}
+
+.page-block:not(:last-of-type) {
+   margin-bottom: 80px;
+}
+
+.header {
+   padding: 24px;
+   align-items: center;
+}
+
+.logo {
+   font-size: 20px;
+}
+
+.nav {
+   gap: 24px;
+}
+
+.nav__vertical {
+   flex-direction: column;
+   gap: 12px;
+}
+
+.nav__link {
+   color: #343a40;
+   font-size: 16px;
+}
+
+.nav__link:hover {
+   text-decoration: underline;
+   color: blue;
+}
+
+.divider {
+   margin: 0;
+   height: 1px;
+   background-color: #dee2e6;
+}
+
+.hero {
+   max-width: 585px;
+   margin: 0 auto;
+}
+
+.hero__title {
+   font-size: 56px;
+   color: var(--color-primary);
+   margin-bottom: 12px;
+   text-align: center;
+}
+
+.hero__text {
+   font-size: 20px;
+   text-align: center;
+}
+
+.plans__card:not(:last-of-type) {
+   margin-right: 24px;
+}
+
+.card-header {
+   padding: 12px;
+   text-align: center;
+   font-size: 24px;
+   color: var(--color-primary)
+}
+
+.card-body {
+   padding: 24px;
+}
+
+.card-block {
+   text-align: center;
+}
+
+.card-block:not(:last-of-type) {
+   margin-bottom: 24px;
+}
+
+.card__price {
+   font-size: 40px;
+   color: var(--color-primary);
+}
+
+.card__price-amount {
+   font-weight: 500;
+}
+
+.card__price-duration {
+   font-size: 29px;
+   color: var(--color-secondary);
+}
+
+.card__price-text {
+   font-size: 16px;
+   color: var(--color-primary);
+   display: block;
+}
+
+.card__price-text:not(:last-of-type) {
+   margin-bottom: 12px;
+}
+
+.card-button {
+   display: block;
+   width: 100%;
+   font-size: 19px;
+   padding: 9px;
+}
+
+.footer {
+   padding: 24px 0;
+}
+
+.footer__logo {
+   margin-bottom: 12px;
+}
+
+.footer__copyright {
+   font-size: 14px;
+   color: var(--color-secondary);
+}
+
+.footer__title {
+   display: block;
+   font-size: 20px;
+   color: var(--color-primary);
+   margin-bottom: 12px;
+   font-weight: 500;
+}
+
+.footer__text .nav__link {
+   color: var(--color-secondary);
+}
