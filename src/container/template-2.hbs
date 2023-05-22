@@ -1,0 +1,90 @@
+<div class="wrapper">
+   <header class="page-block">
+      <div class="container">
+         <div class="header row g-0">
+            <div class="col-3">
+               {{> logo}}
+            </div>
+            <nav class="header__nav col-9">
+               {{> nav list=header isAlineRight=true}}
+            </nav>
+         </div>
+         {{> divider}}
+      </div>
+   </header>
+   <main class="main">
+      <section class="hero page-block">
+         <div class="container">
+            <div class="hero__inner">
+               {{#with hero}}
+               {{> hero title=title text=text}}
+               <a class="hero__button" href="{{button.url}}">{{button.text}}</a>
+               {{/with}}
+            </div>
+         </div>
+      </section>
+      <section class="cards page-block">
+         <div class="container">
+            <div class="row g-4">
+               {{#each preview}}
+               <div class="col-6">
+                  {{> cardPreview data=this}}
+               </div>
+               {{/each}}
+            </div>
+         </div>
+      </section>
+      <section class="blogs page-block">
+         <div class="container">
+            <div class="posts">
+               <div class="row">
+                  <div class="col-6">
+                     <h2 class="posts__title">List of posts</h2>
+                  </div>
+                  <div class="col-6 text-end">
+                     {{#each categories}}
+                     <button class="posts__btn">{{text}}</button>
+                     {{/each}}
+                  </div>
+               </div>
+            </div>
+            <div class="row gx-5">
+               <div class="col-7">
+                  <div class="blog__inner">
+                     {{#each news}}
+                     {{> cardBlog data=this}}
+                     {{/each}}
+                  </div>
+               </div>
+               <div class="col-5">
+                  <aside class="aside">
+                     <div class="about">
+                        <strong class="about__title">About</strong>
+                        <p class="about__text">{{about}}</p>
+                     </div>
+                     {{> linkList data=archive title="Archives"}}
+                     {{> linkList data=social title="Social"}}
+                  </aside>
+               </div>
+            </div>
+         </div>
+      </section>
+   </main>
+   <footer class="footer">
+      <div class="container">
+         {{> divider}}
+         <div class="footer__inner row">
+            <div class="col-3">
+               {{> logo isMarginButton=true}}
+               <span class="footer__copyright">Copyright 2023-2024</span>
+            </div>
+            {{#each footer}}
+            <div class="col-3 footer__text">
+               <span class="footer__title">{{title}}</span>
+               {{> nav list=links isVertical=true}}
+            </div>
+            {{/each}}
+         </div>
+      </div>
+   </footer>
+</div>

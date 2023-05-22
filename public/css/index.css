@@ -1,5 +1,11 @@
 :root {
    --font-primary: 'Roboto', sans-serif;
+   --btn-duration-slow: 2s;
+   --btn-duration-normal: 3s;
+   --btn-duration-fast: 5s;
+   --btn-default-color: #7cfc00;
+   --btn-blue-color: #00bcd4;
+   --btn-purple-color: #772aff;
 }
 
 /**
@@ -18,11 +24,33 @@ body {
 
 body {
    font-family: var(--font-primary);
-   background: #222222;
+   background: #ffffff;
    position: relative;
    overflow: hidden;
    font-size: 100%;
    text-align: center;
+}
+
+.container {
+   width: 100%;
+   max-width: 1230px;
+   margin: 0 auto;
+   padding: 0 15px;
+}
+
+.header {
+   padding-top: 20px;
+   margin-bottom: 40px;
+}
+
+.header-title {
+   border-radius: 70px;
+   box-shadow: 0 0 15px 6px yellow;
+}
+
+.header-title span {
+   color: rgb(25, 255, 87);
+   text-decoration: underline;
 }
 
 .criterion {
@@ -6310,3 +6338,251 @@ body {
    }
 }
 
+/* =====================btn====== */
+
+.btn-inner {
+   /* background-color: #050801; */
+   background-color: #181818;
+   border-radius: 60px;
+   z-index: 999;
+   position: sticky;
+   box-shadow: 0px 0px 13px 4px red;
+}
+
+@media (min-width: 440px) {
+   .neon-button {
+      grid-template-columns: repeat(2, 1fr);
+   }
+}
+
+@media (min-width: 768px) {
+   .neon-button {
+      grid-template-columns: repeat(3, 1fr);
+   }
+}
+
+.neon-button .btn {
+   position: relative;
+   padding: 10px 20px;
+   font-size: 18px;
+   font-weight: 700;
+   border-width: 0;
+   border-radius: 5px;
+   background-color: transparent;
+   transition: all 0.25s;
+   cursor: pointer;
+}
+
+.neon-button .btn.btn-neon {
+   color: var(--btn-default-color);
+   text-transform: uppercase;
+   letter-spacing: 3px;
+   overflow: hidden;
+   margin: 20px 10px;
+}
+
+.neon-button .btn.btn-neon span {
+   position: absolute;
+   transition: all 0.25s;
+   animation-duration: var(--btn-duration-slow);
+   animation-iteration-count: infinite;
+}
+
+.neon-button .btn.btn-neon span:nth-child(1) {
+   top: 0;
+   left: -100%;
+   width: 100%;
+   height: 2px;
+   background: linear-gradient(90deg, transparent 30%, var(--btn-default-color));
+   animation-name: btn-neon-border-top;
+}
+
+.neon-button .btn.btn-neon span:nth-child(2) {
+   right: 0;
+   top: -100%;
+   width: 2px;
+   height: 100%;
+   background: linear-gradient(180deg, transparent 30%, var(--btn-default-color));
+   animation-name: btn-neon-border-right;
+   animation-delay: calc(var(--btn-duration-slow) / 4);
+}
+
+.neon-button .btn.btn-neon span:nth-child(3) {
+   right: -100%;
+   bottom: 0;
+   width: 100%;
+   height: 2px;
+   background: linear-gradient(270deg, transparent 30%, var(--btn-default-color));
+   animation-name: btn-neon-border-bottom;
+   animation-delay: calc(var(--btn-duration-slow) / 4 * 2);
+}
+
+.neon-button .btn.btn-neon span:nth-child(4) {
+   bottom: -100%;
+   left: 0;
+   width: 2px;
+   height: 100%;
+   background: linear-gradient(360deg, transparent 30%, var(--btn-default-color));
+   animation-name: btn-neon-border-left;
+   animation-delay: calc(var(--btn-duration-slow) / 4 * 3);
+}
+
+.neon-button .btn.btn-neon:hover {
+   background-color: var(--btn-default-color);
+}
+
+.neon-button .btn.btn-neon:hover.btn-neon {
+   color: #151515;
+   box-shadow: 0 0 10px var(--btn-default-color), 0 0 30px var(--btn-default-color), 0 0 50px var(--btn-default-color);
+}
+
+.neon-button .btn.btn-neon.btn-blue {
+   color: var(--btn-blue-color);
+}
+
+.neon-button .btn.btn-neon.btn-blue span {
+   animation-duration: var(--btn-duration-normal);
+}
+
+.neon-button .btn.btn-neon.btn-blue span:nth-child(1) {
+   background: linear-gradient(90deg, transparent 30%, var(--btn-blue-color));
+}
+
+.neon-button .btn.btn-neon.btn-blue span:nth-child(2) {
+   background: linear-gradient(180deg, transparent 30%, var(--btn-blue-color));
+   animation-delay: calc(var(--btn-duration-normal) / 4);
+}
+
+.neon-button .btn.btn-neon.btn-blue span:nth-child(3) {
+   background: linear-gradient(270deg, transparent 30%, var(--btn-blue-color));
+   animation-delay: calc(var(--btn-duration-normal) / 4 * 2);
+}
+
+.neon-button .btn.btn-neon.btn-blue span:nth-child(4) {
+   background: linear-gradient(360deg, transparent 30%, var(--btn-blue-color));
+   animation-delay: calc(var(--btn-duration-normal) / 4 * 3);
+}
+
+.neon-button .btn.btn-neon.btn-blue:hover {
+   background-color: var(--btn-blue-color);
+}
+
+.neon-button .btn.btn-neon.btn-blue:hover.btn-neon {
+   box-shadow: 0 0 10px var(--btn-blue-color), 0 0 30px var(--btn-blue-color), 0 0 50px var(--btn-blue-color);
+}
+
+.neon-button .btn.btn-neon.btn-purple {
+   color: var(--btn-purple-color);
+}
+
+.neon-button .btn.btn-neon.btn-purple span:nth-child(1) {
+   background: linear-gradient(90deg, transparent 30%, var(--btn-purple-color));
+}
+
+.neon-button .btn.btn-neon.btn-purple span:nth-child(2) {
+   background: linear-gradient(180deg, transparent 30%, var(--btn-purple-color));
+}
+
+.neon-button .btn.btn-neon.btn-purple span:nth-child(3) {
+   background: linear-gradient(270deg, transparent 30%, var(--btn-purple-color));
+}
+
+.neon-button .btn.btn-neon.btn-purple span:nth-child(4) {
+   background: linear-gradient(360deg, transparent 30%, var(--btn-purple-color));
+}
+
+.neon-button .btn.btn-neon.btn-purple:hover {
+   background-color: var(--btn-purple-color);
+}
+
+.neon-button .btn.btn-neon.btn-purple:hover.btn-neon {
+   box-shadow: 0 0 10px var(--btn-purple-color), 0 0 30px var(--btn-purple-color), 0 0 50px var(--btn-purple-color);
+}
+
+.neon-button .btn.btn-neon.btn-slow span {
+   animation-duration: var(--btn-duration-slow);
+}
+
+.neon-button .btn.btn-neon.btn-slow span:nth-child(2) {
+   animation-delay: calc(var(--btn-duration-slow) / 4);
+}
+
+.neon-button .btn.btn-neon.btn-slow span:nth-child(3) {
+   animation-delay: calc(var(--btn-duration-slow) / 4 * 2);
+}
+
+.neon-button .btn.btn-neon.btn-slow span:nth-child(4) {
+   animation-delay: calc(var(--btn-duration-slow) / 4 * 3);
+}
+
+.neon-button .btn.btn-neon.btn-normal span {
+   animation-duration: var(--btn-duration-normal);
+}
+
+.neon-button .btn.btn-neon.btn-normal span:nth-child(2) {
+   animation-delay: calc(var(--btn-duration-normal) / 4);
+}
+
+.neon-button .btn.btn-neon.btn-normal span:nth-child(3) {
+   animation-delay: calc(var(--btn-duration-normal) / 4 * 2);
+}
+
+.neon-button .btn.btn-neon.btn-normal span:nth-child(4) {
+   animation-delay: calc(var(--btn-duration-normal) / 4 * 3);
+}
+
+.neon-button .btn.btn-neon.btn-fast span {
+   animation-duration: var(--btn-duration-fast);
+}
+
+.neon-button .btn.btn-neon.btn-fast span:nth-child(2) {
+   animation-delay: calc(var(--btn-duration-fast) / 4);
+}
+
+.neon-button .btn.btn-neon.btn-fast span:nth-child(3) {
+   animation-delay: calc(var(--btn-duration-fast) / 4 * 2);
+}
+
+.neon-button .btn.btn-neon.btn-fast span:nth-child(4) {
+   animation-delay: calc(var(--btn-duration-fast) / 4 * 3);
+}
+
+@keyframes btn-neon-border-top {
+   from {
+      left: -100%;
+   }
+
+   to {
+      left: 100%;
+   }
+}
+
+@keyframes btn-neon-border-right {
+   from {
+      top: -100%;
+   }
+
+   to {
+      top: 100%;
+   }
+}
+
+@keyframes btn-neon-border-bottom {
+   from {
+      right: -100%;
+   }
+
+   to {
+      right: 100%;
+   }
+}
+
+@keyframes btn-neon-border-left {
+   from {
+      bottom: -100%;
+   }
+
+   to {
+      bottom: 100%;
+   }
+}
