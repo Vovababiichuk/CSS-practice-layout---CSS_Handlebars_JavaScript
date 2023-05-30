@@ -15,11 +15,13 @@
       <div class="container">
          {{#with main}}
          <div class="hero__inner">
-            <img class="hero__img" src="{{image}}" alt="photo hero">
+            <img class="hero__img" src="{{image}}" alt="Hero" width="500" height="500">
             <div class="hero__content">
                <h1 class="hero__title">{{heading}}</h1>
                <p class="hero__desc">{{descriotion}}</p>
-               <button class="hero__btn" href="{{href}}">{{button}}</button>
+               <div class="hero__button">
+                  <button class="hero__btn" href="{{href}}">{{button}}</button>
+               </div>
             </div>
          </div>
          {{/with}}

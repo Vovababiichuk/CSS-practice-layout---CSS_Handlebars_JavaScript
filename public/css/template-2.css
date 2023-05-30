@@ -323,12 +323,13 @@ body {
 .footer__list {
    display: flex;
    flex-direction: column;
-   gap: 12px;
+   gap: 14px;
 }
 
 .footer__link {
    color: var(--color-secondary);
    font-size: 16px;
+   line-height: 1.2;
 }
 
 .footer__link:hover {
