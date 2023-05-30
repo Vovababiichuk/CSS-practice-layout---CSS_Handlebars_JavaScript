@@ -46,6 +46,7 @@ html {
 .header__nav-link {
    color: #343a40;
    font-size: 16px;
+   text-decoration: none;
 }
 
 .header__nav-link:hover {
@@ -169,6 +170,7 @@ html {
    color: var(--color-secondary);
    font-size: 16px;
    line-height: 1.2;
+   text-decoration: none;
 }
 
 .footer__link:hover {

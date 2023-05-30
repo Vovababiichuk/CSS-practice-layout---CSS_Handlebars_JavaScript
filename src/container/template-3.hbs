@@ -20,7 +20,7 @@
                <h1 class="hero__title">{{heading}}</h1>
                <p class="hero__desc">{{descriotion}}</p>
                <div class="hero__button">
-                  <button class="hero__btn" href="{{href}}">{{button}}</button>
+                  <button class="hero__btn button" href="{{href}}">{{button}}</button>
                </div>
             </div>
          </div>
@@ -29,12 +29,23 @@
    </section>
    <section class="blog">
       <div class="container">
-Blog
+         <div class="blog__inner">
+            {{#each featured}}
+            {{> cardBlog-two data=this}}
+            {{/each}}
+         </div>
       </div>
    </section>
    <section class="form">
       <div class="container">
-Form
+         <div class="form__inner">
+            {{#each actions}}
+            <div class="form__content">
+               <h3 class="form__title">{{heading}}</h3>
+               <button class="form__btn button" href="{{url}}">{{text}}</button>
+            </div>
+            {{/each}}
+         </div>
       </div>
    </section>
 </main>
