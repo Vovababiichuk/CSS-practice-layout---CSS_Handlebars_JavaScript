@@ -1,0 +1,67 @@
+<header class="page-block">
+   <div class="container">
+      <div class="header">
+         <div class="header__logo">
+            {{> logo}}
+         </div>
+         <nav class="header__nav">
+            {{> nav list=header}}
+         </nav>
+      </div>
+   </div>
+</header>
+<main class="main">
+   <section class="hero">
+      <div class="container">
+         {{#with main}}
+         <div class="hero__inner">
+            <img class="hero__img" src="{{image}}" alt="Hero" width="500" height="500">
+            <div class="hero__content">
+               <h1 class="hero__title">{{heading}}</h1>
+               <p class="hero__desc">{{descriotion}}</p>
+               <div class="hero__button">
+                  <button class="hero__btn button" href="{{href}}">{{button}}</button>
+               </div>
+            </div>
+         </div>
+         {{/with}}
+      </div>
+   </section>
+   <section class="blog">
+      <div class="container">
+         <div class="blog__inner">
+            {{#each featured}}
+            {{> cardBlog-two data=this}}
+            {{/each}}
+         </div>
+      </div>
+   </section>
+   <section class="form">
+      <div class="container">
+         <div class="form__inner">
+            {{#each actions}}
+            <div class="form__content">
+               <h3 class="form__title">{{heading}}</h3>
+               <button class="form__btn button" href="{{url}}">{{text}}</button>
+            </div>
+            {{/each}}
+         </div>
+      </div>
+   </section>
+</main>
+<footer class="footer">
+   <div class="container">
+      <div class="footer__inner">
+         <div class="footer__logo">
+            {{> logo}}
+            <span class="footer__copyright">Copyright 2023-2024</span>
+         </div>
+         {{#each footer}}
+         <div class="footer__content">
+            <span class="footer__title">{{title}}</span>
+            {{> footer list=links}}
+         </div>
+         {{/each}}
+      </div>
+   </div>
+</footer>
