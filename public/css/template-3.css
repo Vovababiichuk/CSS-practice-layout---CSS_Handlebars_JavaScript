@@ -17,7 +17,8 @@
   --size-b: 36px;
   --weight-title: 500;
   --weight-regular: 400;
-
+  --border-radius: 12px;
+  scroll-behavior: smooth;
 }
 
 html,
@@ -53,6 +54,19 @@ body {
   justify-content: space-between;
   padding: var(--space-l) 0;
   border-bottom: 1px solid var(--color-divider);
+  position: fixed;
+  width: 100%;
+  max-width: 1000px;
+  top: 0;
+  left: calc(50% - (1000px / 2));
+  background-color: var(--color-white);
+  z-index: 1;
+}
+
+@media (max-width: 1000px) {
+  .header {
+    left: 0;
+  }
 }
 
 .header__logo-img {
@@ -85,7 +99,43 @@ body {
 }
 
 .hero {
-  padding: 80px 0;
+  padding: 154px 0;
+}
+
+.hero__modal {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  height: 193px;
+  width: 600px;
+  padding: 18px;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 18px ;
+  line-height: 150%;
+  z-index: 3;
+  display: none;
+  font-size: 16px;
+  color: var(--color-white);
+}
+
+.hero__modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#closeButton {
+  background-color: var(--color-form-bg);
+  padding: 8px 50px;
+  border-radius: var(--border-radius);
+  align-items: end;;
+  cursor: pointer;
+  align-items: right;
+  transition: opacity 0.2s ease-in-out;
+}
+
+#closeButton:hover {
+  opacity: 0.8;
 }
 
 .hero__inner {
@@ -97,11 +147,44 @@ body {
 .hero__img {
   width: 500px;
   height: 500px;
+  border-radius: var(--border-radius);
+}
+
+.hero__slider {
+  position: relative;
+}
+
+.hero__slider-icon {
+  position: absolute;
+  top: calc(50% - 15px);
+  background-color: var(--color-form-bg);
+  width: 45px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--border-radius);
+  color: var(--color-white);
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.hero__slider-icon:hover {
+  opacity: 0.8;
+}
+
+.hero__slider-icon--right {
+  right: var(--space-m);
+}
+
+.hero__slider-icon--left {
+  left: var(--space-m);
 }
 
 .hero__content {
   display: flex;
   flex-direction: column;
+  max-width: 420px;
   gap: var(--space-l);
   align-items: flex-start;
 }
@@ -152,7 +235,7 @@ body {
 .card__img {
   width: 64px;
   height: 64px;
-  border-radius: 12px;
+  border-radius: var(--border-radius);
 }
 
 .card__title {
