@@ -434,6 +434,8 @@ router.get('/template-3', function (req, res) {
          image: "https://picsum.photos/500/500",
          button: "View details",
          href: "https://example.com/",
+         left: '<',
+         right: '>',
       },
 
       featured: [
