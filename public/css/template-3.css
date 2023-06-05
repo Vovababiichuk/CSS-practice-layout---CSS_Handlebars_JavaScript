@@ -60,7 +60,7 @@ body {
   top: 0;
   left: calc(50% - (1000px / 2));
   background-color: var(--color-white);
-  z-index: 1;
+  z-index: 100;
 }
 
 @media (max-width: 1000px) {
@@ -110,7 +110,7 @@ body {
   width: 600px;
   padding: 18px;
   background: rgba(0, 0, 0, 0.75);
-  border-radius: 18px ;
+  border-radius: 18px;
   line-height: 150%;
   z-index: 3;
   display: none;
@@ -128,7 +128,8 @@ body {
   background-color: var(--color-form-bg);
   padding: 8px 50px;
   border-radius: var(--border-radius);
-  align-items: end;;
+  align-items: end;
+  ;
   cursor: pointer;
   align-items: right;
   transition: opacity 0.2s ease-in-out;
@@ -167,6 +168,7 @@ body {
   color: var(--color-white);
   cursor: pointer;
   opacity: 0.6;
+  z-index: 2;
 }
 
 .hero__slider-icon:hover {
@@ -179,6 +181,17 @@ body {
 
 .hero__slider-icon--left {
   left: var(--space-m);
+}
+
+.hero__img {
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s;
+  transform: scale(0.8);
+}
+
+.hero__img.active {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .hero__content {
@@ -236,6 +249,7 @@ body {
   width: 64px;
   height: 64px;
   border-radius: var(--border-radius);
+  cursor: pointer;
 }
 
 .card__title {
@@ -350,4 +364,45 @@ body {
   text-decoration: underline;
   text-decoration-color: var(--color-hover-link);
   color: var(--color-hover-link);
+}
+
+
+
+/* Pulse */
+@-webkit-keyframes hvr-pulse {
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+@keyframes hvr-pulse {
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+.hvr-pulse {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.hvr-pulse:hover, .hvr-pulse:focus, .hvr-pulse:active {
+  -webkit-animation-name: hvr-pulse;
+  animation-name: hvr-pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
 }

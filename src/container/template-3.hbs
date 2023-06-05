@@ -1,7 +1,7 @@
 <header class="page-block">
    <div class="container">
       <div class="header">
-         <div class="header__logo">
+         <div class="header__logo hvr-pulse">
             {{> logo}}
          </div>
          <nav class="header__nav">
@@ -13,7 +13,6 @@
 <main class="main">
    <section class="hero">
       <div class="container">
-
          <div class="hero__modal" id="cookieModal">
             <div class="hero__modal-content">
                <div class="hero__modal-text">
@@ -26,16 +25,13 @@
                <button id="closeButton">Ок</button>
             </div>
          </div>
-
          {{#with main}}
          <div class="hero__inner">
             <div class="hero__slider">
-               <div class="hero__slider-icon hero__slider-icon--left"
-                  onclick="prevSlide()">{{left}}</div>
+               <div class="hero__slider-icon hero__slider-icon--left" onclick="prevSlide()">{{left}}</div>
                <img class="hero__img" src="{{image}}" alt="Hero" width="500"
                   height="500">
-               <div class="hero__slider-icon hero__slider-icon--right"
-                  onclick="nextSlide()">{{right}}</div>
+               <div class="hero__slider-icon hero__slider-icon--right" onclick="nextSlide()">{{right}}</div>
             </div>
             <div class="hero__content">
                <h1 class="hero__title">{{heading}}</h1>
