@@ -3,22 +3,38 @@ let currentSlide = 0;
 const imgElement = document.querySelector('.hero__img');
 
 function prevSlide() {
-  currentSlide--;
-  if (currentSlide < 0) {
-    currentSlide = images.length - 1;
-  }
-  imgElement.src = images[currentSlide];
+  imgElement.classList.remove('active');
+  setTimeout(function() {
+    currentSlide--;
+    if (currentSlide < 0) {
+      currentSlide = images.length - 1;
+    }
+    imgElement.src = images[currentSlide];
+    imgElement.classList.add('active');
+  }, 500);
 }
 
 function nextSlide() {
-  currentSlide++;
-  if (currentSlide >= images.length) {
-    currentSlide = 0;
-  }
-  imgElement.src = images[currentSlide];
+  imgElement.classList.remove('active');
+  setTimeout(function() {
+    currentSlide++;
+    if (currentSlide >= images.length) {
+      currentSlide = 0;
+    }
+    imgElement.src = images[currentSlide];
+    imgElement.classList.add('active');
+  }, 500);
 }
 
 imgElement.src = images[currentSlide]; // Отобразить первое изображение при загрузке страницы
+imgElement.classList.add('active');
+
+
+
+
+
+
+
 
 
 

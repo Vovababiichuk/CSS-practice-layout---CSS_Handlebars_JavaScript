@@ -1,0 +1,80 @@
+<header class="page-block">
+   <div class="container">
+      <div class="header">
+         <div class="header__logo">
+            {{> logo}}
+         </div>
+         <nav class="header__nav">
+            {{> nav list=header}}
+         </nav>
+      </div>
+   </div>
+</header>
+<main class="main">
+   <section class="hero">
+      <div class="container">
+         <div class="hero__inner">
+            <div class="messages">
+               {{#with messages}}
+               <h1 class="messages__title">{{title}}</h1>
+               {{#each list}}
+               <div class="messages__inner">
+                  <strong class="messages__item">{{name}}</strong>
+                  <span class="messages__item-day">{{day}}</span>
+                  <p class="messages__text">{{message}}</p>
+               </div>
+               {{/each}}
+               {{/with}}
+               <a class="messages__link" href="#">All messages</a>
+            </div>
+            <form class="form">
+               {{#with form}}
+               <h2 class="form__title">{{title}}</h2>
+               <div class="form__inputs-list">
+                  {{#each inputs}}
+                  <input class="form__input" type="{{type}}" placeholder="{{placeholder}}" name="{{name}}" id="form-input-{{id}}" required>
+                  {{/each}}
+               </div>
+               {{#with checkbox}}
+               <div class="form__checkbox">
+                  <input class="custom-checkbox" type="checkbox" name="{{name}}" id="myCheckbox">
+                  <div></div>
+                  <label for="myCheckbox">{{label}}</label>
+               </div>
+               {{/with}}
+               <button class="form__btn" type="submit" >{{button}}</button>
+               <p class="form__info">{{info}}</p>
+               {{/with}}
+            </form>
+         </div>
+      </div>
+   </section>
+   <section class="advantages">
+      <div class="container">
+         <div class="advantages__inner">
+            {{#each advantages}}
+            <div class="advantages__content">
+               <strong class="advantages__title">{{title}}</strong>
+               <p class="advantages__text">{{text}}</p>
+            </div>
+            {{/each}}
+         </div>
+      </div>
+   </section>
+</main>
+<footer id="test" class="footer">
+   <div class="container">
+      <div class="footer__inner">
+         <div class="footer__logo">
+            {{> logo}}
+            <span class="footer__copyright">Copyright 2023-2024</span>
+         </div>
+         {{#each footer}}
+         <div class="footer__content">
+            <span class="footer__title">{{title}}</span>
+            {{> footer list=links}}
+         </div>
+         {{/each}}
+      </div>
+   </div>
+</footer>
