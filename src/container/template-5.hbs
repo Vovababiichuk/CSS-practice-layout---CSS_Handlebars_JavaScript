@@ -1,0 +1,95 @@
+<header class="page-block">
+   <div class="container">
+      <div class="header">
+         <div class="header__logo">
+            {{> logo}}
+         </div>
+         <nav class="header__nav">
+            {{> nav list=header}}
+         </nav>
+      </div>
+   </div>
+</header>
+<main class="main">
+   <section class="hero">
+      <div class="container">
+         <div class="hero__inner">
+            <div class="info">
+               {{#with info}}
+               <h1 class="info__title">{{title}}</h1>
+               <p class="info__text">{{description}}</p>
+               {{/with}}
+            </div>
+            <form class="form">
+               {{#with form}}
+               <div class="form__inputs-list">
+                  {{#each inputs}}
+                  <input class="form__input" type="{{type}}"
+                     placeholder="{{placeholder}}" name="{{name}}"
+                     id="form-input-{{id}}" required>
+                  {{/each}}
+               </div>
+               {{#with checkbox}}
+               <div class="form__checkbox">
+                  <input class="custom-checkbox" type="checkbox" name="{{name}}"
+                     id="myCheckbox">
+                  <div></div>
+                  <label for="myCheckbox">{{label}}</label>
+               </div>
+               {{/with}}
+               <button class="form__btn" type="submit">{{button}}</button>
+               <div class="form__line"></div>
+               <p class="form__info">{{info}}</p>
+               {{/with}}
+            </form>
+         </div>
+      </div>
+   </section>
+   <section class="updates">
+      <div class="container">
+         <div class="updates__inner">
+            {{#with updates}}
+            <strong class="updates__title">{{title}}</strong>
+            {{#each list}}
+            {{> updates-card}}
+            {{/each}}
+            <a class="updates__link" href="{{show_all.url}}" target="_blank">{{show_all.text}}</a>
+            {{/with}}
+         </div>
+      </div>
+   </section>
+   <section class="experience">
+      <div class="container">
+         {{#with expirience}}
+         <div class="experience__inner">
+            <h2 class="experience__title">{{title}}</h2>
+            <span class="experience__badge">{{badge}}</span>
+            <div class="experience__list">
+               {{#each list}}
+               <div class="experience__content">
+                  <strong class="experience__content-title">{{name}}</strong>
+                  <p class="experience__content-text">{{details}}</p>
+               </div>
+               {{/each}}
+            </div>
+         </div>
+         {{/with}}
+      </div>
+   </section>
+</main>
+<footer id="test" class="footer">
+   <div class="container">
+      <div class="footer__inner">
+         <div class="footer__logo">
+            {{> logo}}
+            <span class="footer__copyright">Copyright 2023-2024</span>
+         </div>
+         {{#each footer}}
+         <div class="footer__content">
+            <span class="footer__title">{{title}}</span>
+            {{> footer list=links}}
+         </div>
+         {{/each}}
+      </div>
+   </div>
+</footer>
