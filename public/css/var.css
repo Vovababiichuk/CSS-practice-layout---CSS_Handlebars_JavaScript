@@ -1,0 +1,22 @@
+:root {
+  --color-bg: #fff;
+  --color-form-bg: #563d7c;
+  --color-white: #fff;
+  --color-hover-link: #6114dd;
+  --color-title: #212529;
+  --color-secondary: #6c757d;
+  --color-text: #343a40;
+  --color-divider: #dee2e6;
+  --space-m: 12px;
+  --space-xm: 16px;
+  --space-l: 24px;
+  --size-s: 14px;
+  --size-d: 16px;
+  --size-xd: 18px;
+  --size-l: 20px;
+  --size-b: 36px;
+  --weight-title: 500;
+  --weight-regular: 400;
+  --border-radius: 12px;
+  scroll-behavior: smooth;
+}

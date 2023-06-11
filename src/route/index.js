@@ -459,6 +459,27 @@ router.get('/template-3', function (req, res) {
             linkText: "Call to action",
             linkUrl: "https://example.com/",
             photo: "https://picsum.photos/64/64"
+         },
+         {
+            heading: "Featured title",
+            info: "Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.",
+            linkText: "Call to action",
+            linkUrl: "https://example.com/",
+            photo: "https://picsum.photos/64/64"
+         },
+         {
+            heading: "Featured title",
+            info: "This is a wider card with supporting text below as a natural lead-in to additional content",
+            linkText: "Call to action",
+            linkUrl: "https://example.com/",
+            photo: "https://picsum.photos/64/64"
+         },
+         {
+            heading: "Featured title",
+            info: "This is a wider card with supporting text below as a natural lead-in to additional content",
+            linkText: "Call to action",
+            linkUrl: "https://example.com/",
+            photo: "https://picsum.photos/64/64"
          }
       ],
 
