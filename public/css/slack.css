@@ -1,0 +1,156 @@
+@layer component,
+variant;
+
+@font-face {
+  font-family: 'HelveticaNeueBold';
+  src: url(/font/HelveticaNeueBold.ttf);
+}
+
+:root {
+  --color-bg-page: #fff;
+  --color-black: #000;
+  --color-white: #fff;
+  --color-accent: #611F69;
+  --size-container-default: 1230px;
+  --size-container-laptop: 1030px;
+  --size-container-mobile: 730px;
+  --radius-4: 4px;
+  --spacing-8: 8px;
+  --spacing-12: 12px;
+  --spacing-16: 16px;
+  --spacing-20: 20px;
+  --spacing-24: 24px;
+  --spacing-28: 28px;
+  --size-14: 14px;
+  --size-16: 16px;
+  --size-18: 18px;
+  --size-20: 20px;
+  --size-24: 24px;
+  --size-28: 28px;
+  --size-32: 32px;
+  --size-36: 36px;
+}
+
+body {
+  font-family: 'HelveticaNeueBold', 'Arial', 'Helvetica', sans-serif;
+  background-color: var(--color-bg-page);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--size-container-default);
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.hero__inner {
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+  color: var(--color-black);
+}
+
+.hero__section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 62px;
+}
+
+.hero__label {
+  font-weight: 700;
+  font-size: var(--size-14);
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.hero__title {
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 1;
+  margin-bottom: 28px;
+}
+
+.hero__info {
+  font-weight: 700;
+  font-size: var(--size-20);
+  line-height: 1;
+  letter-spacing: -0.2px;
+  margin-bottom: 24px;
+}
+
+.hero__buttons {
+  display: flex;
+  gap: 14px;
+}
+
+@layer component {
+  .button {
+    text-decoration: none;
+    text-align: center;
+    padding: 18px 36px;
+    border-radius: var(--radius-4);
+    color: var(--color-black);
+    transition: opacity 0.3s ease-in-out;
+    display: block;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+  }
+
+  .button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  .button:active {
+    opacity: 0.5;
+  }
+}
+
+@layer variant {
+  .btn-primary {
+    color: var(--color-white);
+    background-color: var(--color-accent);
+  }
+
+  .btn-outline {
+    color: var(--color-accent);
+    border: 2px solid var(--color-accent);
+  }
+}
+
+/* .btn-primary {
+  background-color: var(--color-accent);
+  border-radius: var(--border-radius-4);
+  font-weight: 700;
+  font-size: var(--size-14);
+  letter-spacing: 0.8px;
+  color: var(--color-white);
+} */
+
+/* .btn-outline {
+  padding: 20px 48px;
+  text-align: center;
+  background-color: transparent;
+  border: 2px solid var(--color-accent);
+  border-radius: var(--border-radius-4);
+  font-weight: 700;
+  font-size: var(--size-14);
+  line-height: 1;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--color-accent);
+} */
+
+.hero__brands {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  column-gap: 40px;
+  row-gap: 20px;
+  flex-wrap: wrap;
+}
