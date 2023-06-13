@@ -128,7 +128,7 @@ body {
 
 .hero__brands {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   column-gap: 40px;
   row-gap: 20px;
@@ -139,6 +139,23 @@ body {
 .features {
   padding: 140px 0;
   background-color: #f4ede4;
+}
+
+.features__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.features__bg-decor {
+  position: absolute;
+  top: -135px;
+  right: -10px;
+  width: 500px;
+  height: 400px;
+  background-image: url('/images/feature-decor-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
 }
 
 .features__content {
