@@ -130,6 +130,9 @@ body {
    line-height: 40px;
    opacity: 0;
    overflow: hidden;
+   font-size: 40px;
+   color: rgb(255, 51, 0);
+   font-weight: 700;
 }
 
 .text::after {
@@ -6339,8 +6342,25 @@ body {
    z-index: 999;
    position: sticky;
    box-shadow: 0px 0px 13px 4px red;
-   max-width: 1170px;
+   max-width: 1070px;
    margin: 0 auto;
+}
+
+@keyframes delayAnimation {
+   0% {
+      /* начальное значение свойства */
+      scale: 0;
+   }
+
+   100% {
+      /* конечное значение свойства после задержки */
+      scale: 1;
+   }
+}
+
+.btn-inner {
+   /* другие свойства элемента */
+   animation: delayAnimation 15s;
 }
 
 @media (min-width: 440px) {
