@@ -338,3 +338,67 @@ body {
    text-decoration: underline;
    color: blue;
 }
+
+@media all and (width <=768px) {
+   .hero__inner {
+      text-align: center;
+   }
+
+   .posts .row {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      text-align: center;
+      align-content: center;
+      margin-bottom: 50px;
+   }
+
+   .text-end {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+   }
+
+   .posts__btn {
+      width: 100%;
+      max-width: 300px;
+   }
+}
+
+@media all and (width <=576px) {
+   .cards .row {
+      display: flex;
+      flex-direction: column;
+   }
+
+   .cards .row .col-6 {
+      width: 100%;
+   }
+
+   .blogs .gx-5 {
+      display: flex;
+      flex-direction: column;
+   }
+
+   .blogs .col-7,
+   .blogs .col-5 {
+      width: 100%;
+      text-align: center;
+   }
+
+   .about{
+      margin: 20px 0 50px;
+   }
+
+   .page-block {
+      margin-bottom: 60px;
+   }
+
+   .footer__inner {
+      flex-direction: column;
+   }
+
+   .footer__logo {
+      margin-bottom: 12px;
+   }
+}
