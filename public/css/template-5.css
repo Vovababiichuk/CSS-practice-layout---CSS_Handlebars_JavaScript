@@ -336,6 +336,15 @@ body {
   background-color: var(--color-title);
   border-radius: var(--border-radius-d);
   padding: var(--space-xm);
+  transition-property: transform, box-shadow;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+.experience__content:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 10px #FF7347;
+  cursor: pointer;
 }
 
 .experience__content-title {
