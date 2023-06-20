@@ -587,6 +587,15 @@ body {
       width: 380px;
       height: 200px;
    }
+
+   .delivery__content {
+      text-align: center;
+   }
+
+   .delivery__content-img {
+      display: block;
+      margin: 0 auto;
+   }
 }
 
 @media all and (width <=430px) {
