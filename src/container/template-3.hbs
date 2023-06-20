@@ -1,12 +1,14 @@
 <header class="page-block">
-   <div class="container">
-      <div class="header">
-         <div class="header__logo hvr-pulse">
-            {{> logo}}
+   <div class="header">
+      <div class="container">
+         <div class="header__inner">
+            <div class="header__logo hvr-pulse">
+               {{> logo}}
+            </div>
+            <nav class="header__nav">
+               {{> nav list=header}}
+            </nav>
          </div>
-         <nav class="header__nav">
-            {{> nav list=header}}
-         </nav>
       </div>
    </div>
 </header>
@@ -17,8 +19,10 @@
             <div class="hero__modal-content">
                <div class="hero__modal-text">
                   Мы используем файлы cookie на нашем веб-сайте. Файлы cookie
-                  необходимы для обеспечения правильной работы сайта, а также для
-                  улучшения вашего пользовательского опыта. Продолжая использовать
+                  необходимы для обеспечения правильной работы сайта, а также
+                  для
+                  улучшения вашего пользовательского опыта. Продолжая
+                  использовать
                   наш сайт, вы соглашаетесь с нашей политикой в отношении файлов
                   cookie.
                </div>
@@ -28,10 +32,12 @@
          {{#with main}}
          <div class="hero__inner">
             <div class="hero__slider">
-               <div class="hero__slider-icon hero__slider-icon--left" onclick="prevSlide()">{{left}}</div>
+               <div class="hero__slider-icon hero__slider-icon--left"
+                  onclick="prevSlide()">{{left}}</div>
                <img class="hero__img" src="{{image}}" alt="Hero" width="500"
                   height="500">
-               <div class="hero__slider-icon hero__slider-icon--right" onclick="nextSlide()">{{right}}</div>
+               <div class="hero__slider-icon hero__slider-icon--right"
+                  onclick="nextSlide()">{{right}}</div>
             </div>
             <div class="hero__content">
                <h1 class="hero__title">{{heading}}</h1>
