@@ -52,6 +52,7 @@ body {
   max-width: 1180px;
   margin: 0 auto;
   padding: 0 15px;
+  position: relative;
 }
 
 .header__inner {
@@ -331,4 +332,51 @@ body {
   font-size: var(--size-d);
   line-height: 1;
   color: var(--color-text);
+}
+
+@media all and (width <=768px) {
+  .about__inner {
+    text-align: center;
+  }
+
+  .articles__inner {
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+  }
+
+  .articles__title {
+    text-align: center;
+  }
+
+  .card,
+  .card__title {
+    align-items: center;
+  }
+
+  .footer__inner {
+    flex-direction: column;
+    gap: 18px;
+    text-align: center;
+  }
+}
+
+@media all and (width <=576px) {
+  .header__inner {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 18px;
+  }
+
+  .header__info {
+    display: none;
+  }
 }
