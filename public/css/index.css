@@ -6600,3 +6600,29 @@ body {
       bottom: 100%;
    }
 }
+
+@media all and (width <=576px) {
+   .header-title {
+      border-radius: 30px;
+   }
+
+   .p-5 {
+      padding: 2rem !important;
+      font-size: 20px;
+   }
+
+   .btn-inner {
+      display: flex;
+      flex-direction: column;
+      padding: 10px 20px;
+      border-radius: 30px;
+   }
+
+   .neon-button .btn {
+      padding: 10px;
+   }
+
+   .neon-button .btn.btn-neon {
+      margin: 8px;
+   }
+}
