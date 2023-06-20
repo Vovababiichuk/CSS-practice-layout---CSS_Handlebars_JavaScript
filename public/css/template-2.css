@@ -366,6 +366,10 @@ body {
 }
 
 @media all and (width <=576px) {
+   .hero__inner {
+      padding: 45px;
+   }
+
    .cards .row {
       display: flex;
       flex-direction: column;
@@ -396,6 +400,7 @@ body {
 
    .footer__inner {
       flex-direction: column;
+      text-align: center;
    }
 
    .footer__logo {
