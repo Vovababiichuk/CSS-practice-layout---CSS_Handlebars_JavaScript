@@ -6338,7 +6338,7 @@ body {
 .btn-inner {
    /* background-color: #050801; */
    background-color: #181818;
-   border-radius: 60px;
+   border-radius: 50px;
    z-index: 999;
    position: sticky;
    box-shadow: 0px 0px 13px 4px red;

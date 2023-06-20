@@ -177,3 +177,27 @@ html {
    text-decoration: underline;
    color: blue;
 }
+
+@media all and (width <=850px) {
+   .adaptive {
+      flex-direction: column;
+      gap: 28px;
+   }
+
+   .card-button {
+      width: 100%;
+      max-width:300px;
+      margin: 0 auto;
+   }
+}
+
+@media all and (width <=576px) {
+   .footer__inner {
+      flex-direction: column;
+   }
+
+   .footer__logo {
+      margin-bottom: 12px;
+   }
+
+}
